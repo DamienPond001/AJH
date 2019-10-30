@@ -1,13 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body,
 html {
 	color: #555;
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 20px;
 	font-weight: 300;
 	text-rendering: optimizeLegibility;
@@ -21,21 +21,164 @@ h1 {
 	font-size: 350%;
 	font-weight: 100;
 	color: #fff;
-	position: absolute;
-	top:50%;
-	left:10%;
 }
 
+h2 {
+	font-size: 200%;
+	font-weight: 300;
+	color: #555;
+	margin-top: 50px;
+	text-align: center;
+	text-transform: uppercase
+}
 
+h2:after {
+	display: block;
+	height: 2px;
+	background-color: #6a0435;
+	content: " ";
+	width: 6%;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+h4 {
+	font-size: 170%;
+	font-weight: 300;
+	color: #fff;
+}
+
+h5 {
+	font-size: 120%;
+	font-weight: 300;
+	color: #fff;
+}
+
+.btn {
+	font-weight: 300;
+}
+
+.btn-maroon:link,
+.btn-maroon:visited {
+	background-color: rgba(42, 2, 21, 0.6);
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	border: 1px solid #6a0435;
+	color: #fff;
+}
+
+.btn-maroon:hover,
+.btn-maroon:active {
+	background-color: rgba(42, 2, 21, 1);
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	border: 1px solid #6a0435;
+	color: #fff;
+}
 
 /*-------------------*/
 /*------HEADER------*/
 /*-------------------*/
 
-
 header {
 	height: 100vh;
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/header.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/header.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.title-col {
+	margin-top: 30vh;
+	padding-left: 10vw;
+}
+
+/*-------------------*/
+/*------SERVICES------*/
+/*-------------------*/
+
+.service-box {
+	box-shadow: 0 2px 2px #555;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+}
+
+.card-body {
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+}
+
+.card-title {
+	font-size: 150%;
+	color: #6a0435;
+	font-weight: 400;
+	padding: 10px 0 20px 10px;
+	background-color: rgba(221, 221, 221, 0.712);
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+}
+
+ul {
+	list-style: none;
+	color: #fff;
+}
+
+ul ul {
+	list-style: none;
+	margin-left: 30px;
+}
+
+.ajh-check {
+	color: #03c713;
+	margin-right: 15px;
+}
+
+.ajh-list-icon {
+	margin-right: 15px;
+}
+
+/*make responsive*/
+.card-columns {
+	column-count: 2;
+}
+
+.card-img-accounting {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("img/accouting.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.card-img-payroll {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("img/payroll.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.card-img-statutory {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("img/statutory.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.card-img-taxation {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("img/taxation.jpg");
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
