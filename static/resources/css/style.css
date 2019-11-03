@@ -26,10 +26,10 @@ h1 {
 h2 {
 	font-size: 200%;
 	font-weight: 300;
-	color: #555;
+	color: rgb(255, 255, 255);
 	padding-top: 50px;
 	text-align: center;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
 h2:after {
@@ -81,6 +81,19 @@ h5 {
 	color: #fff;
 }
 
+section {
+	margin-bottom: 35px;
+	position: relative;
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	margin-bottom: 20px;
+}
+
 /*-------------------*/
 /*------HEADER------*/
 /*-------------------*/
@@ -91,6 +104,19 @@ header {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+	position: fixed;
+	width: 100vw;
+	z-index: 0;
+}
+
+header h1 {
+	font-family: "EB Garamond", serif;
+	font-weight: 400;
+}
+
+header h4 {
+	font-family: "EB Garamond", serif;
+	font-weight: 400;
 }
 
 .title-col {
@@ -98,14 +124,32 @@ header {
 	padding-left: 10vw;
 }
 
+.header-placeholder {
+	height: 100vh;
+}
+
+header .header-row {
+	opacity: 1;
+	transition: opacity 0.4s;
+	-webkit-transition: opacity 0.4s;
+	-moz-transition: opacity 0.4s;
+	-ms-transition: opacity 0.4s;
+	-o-transition: opacity 0.4s;
+}
+
+header .header-row.animated {
+	opacity: 0
+}
+
+
 /*-------------------*/
 /*------SERVICES------*/
 /*-------------------*/
 
 #services {
-	background-image: linear-gradient(to bottom, #fff, rgba(42,2, 51, 0.5));
+	background-image: linear-gradient(#1e1e1e, #1e1e1e);
+	position: relative;
 }
-
 .service-box {
 	box-shadow: 0 2px 2px #555;
 	border-radius: 0px;
@@ -113,6 +157,19 @@ header {
 	-moz-border-radius: 0px;
 	-ms-border-radius: 0px;
 	-o-border-radius: 0px;
+}
+
+.card{
+	opacity: 0;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-ms-transition: 0.2s;
+	-o-transition: 0.2s;
+}
+
+.card.animated{
+	opacity: 1;
 }
 
 .card-body {
@@ -126,7 +183,7 @@ header {
 .card-title {
 	font-size: 150%;
 	color: #fff;
-	font-weight: 400;
+	font-weight: 300;
 	padding: 10px 0 20px 10px;
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
@@ -146,7 +203,7 @@ ul ul {
 }
 
 .ajh-check {
-	color: #03c713;
+	color: #609c2a;
 	margin-right: 15px;
 }
 
@@ -189,24 +246,44 @@ ul ul {
 	background-attachment: fixed;
 }
 
-/*-------------------*/
-/*------Sage Images------*/
-/*-------------------*/
-
-#sage .fig-image {
+#services .fig-image {
 	background-color: #000000;
-	transition: background-color 0.2s;
-	-webkit-transition: background-color 0.2s;
-	-moz-transition: background-color 0.2s;
-	-ms-transition: background-color 0.2s;
-	-o-transition: background-color 0.2s;
+	transition: background-color 0.4s;
+	-webkit-transition: background-color 0.4s;
+	-moz-transition: background-color 0.4s;
+	-ms-transition: background-color 0.4s;
+	-o-transition: background-color 0.4s;
+	overflow: hidden;
 }
 
-#sage .fig-image:hover {
-	background-color: rgb(153, 152, 152);
+#services .fig-image:hover {
+	background-color: rgb(124, 123, 123);
+}
+
+#services .fig-image .image {
+	opacity: 0.7;
+	transition: transform 0.4s;
+	-webkit-transition: transform 0.4s;
+	-moz-transition: transform 0.4s;
+	-ms-transition: transform 0.4s;
+	-o-transition: transform 0.4s;
+}
+
+#services .fig-image .image:hover {
+	transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
 }
 
 
-#sage .fig-image .image {
-	opacity:0.7;
+/*-------------------*/
+/*------ABOUT------*/
+/*-------------------*/
+
+#about .row {
+	color: #fff;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.616), #00000000);
+	padding:15px
 }
