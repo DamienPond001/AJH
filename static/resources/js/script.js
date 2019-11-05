@@ -38,7 +38,7 @@ $(document).ready(function() {
         }
     },
     {
-        offset: '45%;'
+        offset: '35%;'
     });
 
     $(".js--wp-1").waypoint(function(direction){
@@ -47,6 +47,7 @@ $(document).ready(function() {
         }
     },
     {
-        offset: '35%;'
+        offset: '30%;'
     });
+
 });
