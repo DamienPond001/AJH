@@ -41,11 +41,11 @@ $(document).ready(function() {
 	$(".js--wp-1").waypoint(
 		function(direction) {
 			if (direction == "down") {
-				$(".primary-nav").css({"display":"none"});
-				$(".secondary-nav").css({"display":"block"});
+				$(".primary-nav").addClass('out-of-view');
+				$(".secondary-nav").removeClass('out-of-view animated fadeIn');
 			} else {
-				$(".secondary-nav").css({"display":"none"});
-				$(".primary-nav").css({"display":"block"});
+				$(".secondary-nav").addClass('out-of-view');
+				$(".primary-nav").removeClass('out-of-view');
 			}
 		},
 		{
