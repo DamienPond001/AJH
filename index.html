@@ -20,17 +20,18 @@
 		/>
 		<link rel="stylesheet" type="text/css" href="static/vendors/css/animate.css" />
 		<link rel="stylesheet" href="static/resources/css/style.css" />
+		<link rel="stylesheet" href="static/resources/css/queries.css" />
 		<title>Document</title>
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-expand-md custom-toggler">
+			<nav class="navbar navbar-expand-md custom-toggler primary-nav px-5">
 				<a href="#">
 					<img src="resources/img/logo-white.png" alt="" class="logo" />
 					<img src="resources/img/logo.png" alt="" class="logo-black" />
 				</a>
 				<button
-					class="navbar-toggler"
+					class="navbar-toggler navbar-dark"
 					type="button"
 					data-toggle="collapse"
 					data-target="#navbarSupportedContent"
@@ -40,8 +41,8 @@
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<div class="collapse navbar-collapse " id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
 							<a href="#features" class="nav-link">Services</a>
@@ -53,13 +54,14 @@
 							<a href="#cities" class="nav-link">Contact</a>
 						</li>
 					</ul>
+					<i class="nav-icon fas fa-bars"></i>
 				</div>
 			</nav>
 			<div class="row">
 				<div class="main-logo">
-						<a  href="#">
-								<img src="static/resources/css/img/logo_circle_white.png" alt="">
-							  </a>
+					<a href="#">
+						<img src="static/resources/css/img/logo_circle_white.png" alt="" />
+					</a>
 				</div>
 			</div>
 			<div class="row header-row">
@@ -81,6 +83,38 @@
 				</div>
 			</div>
 		</header>
+		<nav class="navbar navbar-expand-md custom-toggler secondary-nav px-5">
+				<a href="#">
+					<img src="resources/img/logo-white.png" alt="" class="logo" />
+					<img src="resources/img/logo.png" alt="" class="logo-black" />
+				</a>
+				<button
+					class="navbar-toggler navbar-dark"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse " id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="#features" class="nav-link">Services</a>
+						</li>
+						<li class="nav-item">
+							<a href="#how" class="nav-link">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="#cities" class="nav-link">Contact</a>
+						</li>
+					</ul>
+					<i class="nav-icon fas fa-bars"></i>
+				</div>
+			</nav>
 		<section class="header-placeholder"></section>
 		<section id="services" class="js--wp-1">
 			<h2>Services</h2>
@@ -278,43 +312,45 @@
 			</div>
 
 			<div class="container">
-					<div class="row">
-							<div class="col-6 map-cols map-content">
-									<div class="contact-details">
-										<h3 class="mb-2">Johannesburg</h3>
-										<div class="row">
-											<div class="col-4">Telephone</div>
-											<div class="col-8"><a href="tel:021 786 1595">082 412 6802</a></div>
-										</div>
-										<div class="row">
-											<div class="col-4">Email</div>
-											<div class="col-8">
-												<a href="mailto:info@ajhaccounting.co.za">info@ajhaccounting.co.za</a>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-4">Address</div>
-											<div class="col-8">9B Sundowner Plaza, Corner Taurus & Apollo Street, Sundowner, 2188</div>
-										</div>
-									</div>
+				<div class="row">
+					<div class="col-6 map-cols map-content">
+						<div class="contact-details">
+							<h3 class="mb-2">Johannesburg</h3>
+							<div class="row">
+								<div class="col-4">Telephone</div>
+								<div class="col-8"><a href="tel:021 786 1595">082 412 6802</a></div>
+							</div>
+							<div class="row">
+								<div class="col-4">Email</div>
+								<div class="col-8">
+									<a href="mailto:info@ajhaccounting.co.za">info@ajhaccounting.co.za</a>
 								</div>
-						<div class="col-6 map-cols">
-							<div class="mapouter">
-								<div class="gmap_canvas">
-									<iframe
-										class="map"
-										id="gmap_canvas"
-										src="https://maps.google.com/maps?q=Apollo%20Street%2C%20Sundowner&t=&z=15&ie=UTF8&iwloc=&output=embed"
-										frameborder="0"
-										scrolling="no"
-										marginheight="0"
-										marginwidth="0"
-									></iframe>
+							</div>
+							<div class="row">
+								<div class="col-4">Address</div>
+								<div class="col-8">
+									9B Sundowner Plaza, Corner Taurus & Apollo Street, Sundowner, 2188
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="col-6 map-cols">
+						<div class="mapouter">
+							<div class="gmap_canvas">
+								<iframe
+									class="map"
+									id="gmap_canvas"
+									src="https://maps.google.com/maps?q=Apollo%20Street%2C%20Sundowner&t=&z=15&ie=UTF8&iwloc=&output=embed"
+									frameborder="0"
+									scrolling="no"
+									marginheight="0"
+									marginwidth="0"
+								></iframe>
+							</div>
+						</div>
+					</div>
 				</div>
+			</div>
 		</section>
 		<footer></footer>
 		<script
