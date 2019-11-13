@@ -68,6 +68,7 @@ h5 {
 	font-weight: 300;
 }
 
+.btn-maroon,
 .btn-maroon:link,
 .btn-maroon:visited {
 	background-color: #6a0435;
@@ -174,7 +175,8 @@ header .header-row.animated {
 	top: 0;
 	z-index: 999;
 	position: sticky;
-	background: #fff;
+	background: rgba(0, 0, 0, 0.801);
+	box-shadow: 0 0 3px rgb(161, 161, 161);
 	transition: opacity 0.2s;
 	-webkit-transition: opacity 0.2s;
 	-moz-transition: opacity 0.2s;
@@ -192,9 +194,7 @@ header .header-row.animated {
 }
 
 
-.secondary-nav .nav-link {
-	color: #000000;
-}
+
 
 .primary-nav .nav-icon {
 	color: #fff;
@@ -217,7 +217,7 @@ header .header-row.animated {
 }
 
 .nav-item {
-	opacity: 0;
+
 	transition: opacity ease 0.2s;
 	-webkit-transition: opacity ease 0.2s;
 	-moz-transition: opacity ease 0.2s;
@@ -229,20 +229,52 @@ header .header-row.animated {
 	opacity: 1;
 }
 
-.nav-link {
-	border-bottom: 2px solid transparent;
-	transition: border-bottom ease 0.3s;
-	-webkit-transition: border-bottom ease 0.3s;
-	-moz-transition: border-bottom ease 0.3s;
-	-ms-transition: border-bottom ease 0.3s;
-	-o-transition: border-bottom ease 0.3s;
+
+.nav-link::after {
+	content: '';
+	width: 100%;
+	height: 3px;
+	color: white;
+	background-color: #bc075e;
+	display: block;
+	margin-top: 5px;
+	border-radius: 3px;
+	-webkit-border-radius: 3p;
+	-moz-border-radius: 3p;
+	-ms-border-radius: 3p;
+	-o-border-radius: 3p;
+	transform: scale(0,1);
+	-webkit-transform: scale(0,1);
+	-moz-transform: scale(0,1);
+	-ms-transform: scale(0,1);
+	-o-transform: scale(0,1);
+	transform-origin: left;
+	transition: transform 0.3s;
+	-webkit-transition: transform 0.3s;
+	-moz-transition: transform 0.3s;
+	-ms-transition: transform 0.3s;
+	-o-transition: transform 0.3s;
 }
 
-.nav-link:hover,
-.nav-link:active,
-.nav-link:focus {
-	color: white;
-	border-bottom: 2px solid #6a0435;
+.nav-link:hover{
+	color: #fff;
+}
+
+.secondary-nav .nav-link {
+	color: #fff;
+	font-size: 80%;
+	padding: 0;
+}
+
+.nav-link:hover::after,
+.nav-link:active::after ,
+.nav-link:focus::after {
+	color: #fff;
+	transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	-o-transform: scale(1,1);
 }
 
 .nav-link:focus {

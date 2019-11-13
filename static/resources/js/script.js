@@ -41,11 +41,19 @@ $(document).ready(function() {
 	$(".js--wp-1").waypoint(
 		function(direction) {
 			if (direction == "down") {
-				$(".primary-nav").addClass('out-of-view');
+                $(".primary-nav").addClass('out-of-view');
+                $(".primary-nav").removeClass('animated fadeIn');
+                
 				$(".secondary-nav").removeClass('out-of-view animated fadeIn');
-			} else {
-				$(".secondary-nav").addClass('out-of-view');
-				$(".primary-nav").removeClass('out-of-view');
+				$(".secondary-nav").addClass('animated fadeIn');
+
+            } else {
+                $(".secondary-nav").addClass('out-of-view');
+                $(".secondary-nav").removeClass('animated fadeIn');
+
+                
+                $(".primary-nav").removeClass('out-of-view');
+                $(".primary-nav").addClass('animated fadeIn');
 			}
 		},
 		{
