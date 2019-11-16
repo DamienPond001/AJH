@@ -9,7 +9,7 @@ $(document).ready(function() {
 	$(".js--wp-1").waypoint(
 		function(direction) {
 			if (direction == "down") {
-				$(".header-row").removeClass("animated fadeIn");
+				$(".header-row").removeClass("animated fadeIn initial");
 				$(".header-row").addClass("animated fadeOut");
 			} else {
 				$(".header-row").removeClass("animated fadeOut");
@@ -19,17 +19,35 @@ $(document).ready(function() {
 		{
 			offset: "70%;"
 		}
-	);
+    );
+    
+    //Input field check
+    $("input").blur(function(){
+        if($(this).val() != '' ){
+            $(this).addClass('has-value');
+        }
+        else{
+            $(this).removeClass('has-value');
+        }
+       
+    })
+
+    
+
 
 	//Logo fade out on scroll
 	$(".js--wp-1").waypoint(
 		function(direction) {
 			if (direction == "down") {
 				$(".main-logo").removeClass("animated fadeIn");
-				$(".main-logo").addClass("animated fadeOut");
+                $(".main-logo").addClass("animated fadeOut");
+                
+                $(".section-nav").addClass("scrolled");
 			} else {
 				$(".main-logo").removeClass("animated fadeOut");
-				$(".main-logo").addClass("animated fadeIn");
+                $(".main-logo").addClass("animated fadeIn");
+                
+                $(".section-nav").removeClass("scrolled");
 			}
 		},
 		{
