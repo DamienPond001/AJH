@@ -32,6 +32,10 @@ $(document).ready(function() {
        
     })
 
+	//Toggle click event
+	$(".navbar-toggler").click(function(){
+		$(".navbar").toggleClass("open");
+	})
     
 
 

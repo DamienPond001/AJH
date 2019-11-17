@@ -199,11 +199,18 @@ header .header-row.animated {
 	stroke-width: 40;
 	animation: fill-animate 0.3s ease-out 1.8s forwards, translate-logo 1s ease-out 2.1s forwards;
 	-webkit-animation: fill-animate 0.3s ease-out 1.8s forwards, translate-logo 1s ease-out 2.1s forwards;
-	transform: translateY(60%);
-	-webkit-transform: translateY(60%);
-	-moz-transform: translateY(60%);
-	-ms-transform: translateY(60%);
-	-o-transform: translateY(60%);
+	transform: translateY(60%) scale(2);
+	-webkit-transform: translateY(60%) scale(2);
+	-moz-transform: translateY(60%) scale(2);
+	-ms-transform: translateY(60%) scale(2);
+	-o-transform: translateY(60%) scale(2);
+}
+
+.svg-logo-small {
+	fill: #fff;
+	height: 5vh;
+	width: auto;
+	margin-bottom: 10px;
 }
 
 path.outer-circle {
@@ -393,65 +400,6 @@ H - 11261.841796875*/
 	outline: none;
 }
 
-/*.nav-item {
-	transform: scale(0,1);
-	-webkit-transform: scale(0,1);
-	-moz-transform: scale(0,1);
-	-ms-transform: scale(0,1);
-	-o-transform: scale(0,1);
-	transition: transform ease 0.2s;
-	-webkit-transition: transform ease 0.2s;
-	-moz-transition: transform ease 0.2s;
-	-ms-transition: transform ease 0.2s;
-	-o-transition: transform ease 0.2s;
-}
-
-.nav-item.active {
-	transform: scale(1,1);
-	-webkit-transform: scale(1,1);
-	-moz-transform: scale(1,1);
-	-ms-transform: scale(1,1);
-	-o-transform: scale(1,1);
-}*/
-
-/*.main-logo::before {
-	content: '';
-	position: absolute;
-	border: 1px solid #6a0435;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	transform: scale(0,0);
-	-webkit-transform: scale(0,0);
-	-moz-transform: scale(0,0);
-	-ms-transform: scale(0,0);
-	-o-transform: scale(0,0);
-	transition: transform ease-out 0.4s;
-	-webkit-transition: transform ease-out 0.4s;
-	-moz-transition: transform ease-out 0.4s;
-	-ms-transition: transform ease-out 0.4s;
-	-o-transition: transform ease-out 0.4s;
-}
-
-.main-logo:hover::before {
-	content: '';
-	position: absolute;
-	border: 1px solid #6a0435;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	transform: scale(1,1);
-	-webkit-transform: scale(1,1);
-	-moz-transform: scale(1,1);
-	-ms-transform: scale(1,1);
-	-o-transform: scale(1,1);
-}*/
 
 /*-------------------*/
 /*------SERVICES------*/
@@ -606,6 +554,7 @@ ul ul {
 
 #contact {
 	background: rgba(12, 12, 12, 0.8);
+	margin-bottom: 15px;
 }
 
 .map-cols {
@@ -652,8 +601,6 @@ ul ul {
 	-ms-transform:;
 	-o-transform:;
 }
-
-/*--test--*/
 
 form {
 	position: relative;
@@ -762,4 +709,30 @@ form .text-area {
 
 form .text-area-entry {
 	height: unset;
+}
+
+
+/*-------------------*/
+/*------FOOTER------*/
+/*-------------------*/
+
+footer {
+	position: relative;
+	bottom: 0;
+	min-height: 50px;
+	margin-top: 20px;
+}
+
+footer p {
+	font-size: 80%;
+	color: rgb(207, 207, 207);
+}
+
+footer a {
+	color: #c06993;
+}
+
+footer a:hover {
+	color: #c06993;
+	border-bottom: 1px solid #c06993;
 }

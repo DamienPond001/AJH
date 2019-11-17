@@ -10,10 +10,44 @@
     .nav-icon {
         display: none;
     }
+
+    .navbar.open {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .section-nav.scrolled .navbar.open{
+        background-color: rgba(107, 107, 107, 0.5);
+    }
+    .navbar {
+        background-color: transparent;
+    }
+
+    h1 {
+        font-size: 300%;
+    }
+
+    h4 {
+        font-size: 140%;
+
+    }
+
+    
  }
 
 /* Medium devices (tablets, less than 992px)*/
-@media (max-width: 991.98px) {  }
+@media (max-width: 991.98px) {
+    .card-columns{
+        column-count: 1;
+    }
+
+    body {
+        font-size: 18px;
+    }
+  }
 
 /* Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) {  }
+@media (max-width: 1199.98px) {
+    body {
+        font-size: 19px;
+    }
+  }
