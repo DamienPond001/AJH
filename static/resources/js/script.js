@@ -36,6 +36,12 @@ $(document).ready(function() {
 	$(".navbar-toggler").click(function(){
 		$(".navbar").toggleClass("open");
 	})
+	$(".nav-link").click(function(){
+		if(window.innerWidth <= 768){
+			$(".navbar").toggleClass("open");
+
+		}
+	})
     
 
 
@@ -143,4 +149,8 @@ $(document).ready(function() {
 			  }
 			});
 		  });
+
+		  $('.navbar-nav>li>a').on('click', function(){
+			$('.navbar-collapse').collapse('hide');
+		});
 });

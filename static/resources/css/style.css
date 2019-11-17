@@ -50,7 +50,7 @@ h3 {
 	color: #6a0435;
 	padding-top: 10px;
 	text-align: center;
-	text-transform: capitalize;
+	text-transform: uppercase;
 }
 
 h4 {
@@ -72,6 +72,7 @@ p {
 
 .btn {
 	font-weight: 300;
+	font-size: 100%;
 }
 
 .btn-maroon,
@@ -454,12 +455,28 @@ H - 11261.841796875*/
 
 ul {
 	list-style: none;
+	list-style-position: outside;
 	color: #fff;
 }
 
 ul ul {
 	list-style: none;
 	margin-left: 30px;
+}
+
+#services ul li::before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+	padding: 0 10px 0 0;
+	color: #609c2a;
+	
+}
+
+#services ul ul li::before {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+	padding: 0 10px 0 0;
+	color: #fff;
 }
 
 .ajh-check {
@@ -597,10 +614,6 @@ ul ul {
 
 #contact a:hover {
 	border-bottom: 2px solid #bc075e;
-	-webkit-transform:;
-	-moz-transform:;
-	-ms-transform:;
-	-o-transform:;
 }
 
 form {
