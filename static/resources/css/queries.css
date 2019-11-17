@@ -15,6 +15,10 @@
         background-color: rgba(0, 0, 0, 0.8);
     }
 
+    .section-nav.scrolled{
+        background-color:transparent;
+    }
+
     .section-nav.scrolled .navbar.open{
         background-color: rgba(107, 107, 107, 0.5);
     }
