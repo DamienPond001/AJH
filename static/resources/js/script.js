@@ -89,6 +89,25 @@ $(document).ready(function() {
 		}
 	);
 
+	
+	//indicator fade out on scroll
+	$(".js--wp-1").waypoint(
+		function(direction) {
+			if (direction == "down") {
+				$(".indicator").removeClass('animated fadeIn');
+                $(".indicator").addClass('animated fadeOut');
+
+            } else {
+				$(".indicator").removeClass('animated fadeOut');
+                $(".indicator").addClass('animated fadeIn');
+
+			}
+		},
+		{
+			offset: "100%;"
+		}
+	);
+
 	//Cards fade in
 	$(".js--wp-1").waypoint(
 		function(direction) {
@@ -153,4 +172,15 @@ $(document).ready(function() {
 		  $('.navbar-nav>li>a').on('click', function(){
 			$('.navbar-collapse').collapse('hide');
 		});
+
+		//Animate indicator
+		(function myLoop (i) {          
+			setTimeout(function () {  
+				console.log(i)
+				if(i%5==0){
+					$(".indicator i").toggleClass('animated bounce');  
+				}           
+			   if (--i) myLoop(i);     
+			}, 3000)
+		 })(107);                        
 });

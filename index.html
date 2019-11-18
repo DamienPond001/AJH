@@ -4,6 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="apple-touch-icon" sizes="180x180" href="static/resources/icons/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="static/resources/icons/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="static/resources/icons/favicon-16x16.png" />
+		<link rel="manifest" href="static/resources/icons/site.webmanifest" />
+		<link rel="mask-icon" href="static/resources/icons/safari-pinned-tab.svg" color="#5bbad5" />
+		<link rel="shortcut icon" href="static/resources/icons/favicon.ico" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="msapplication-config" content="static/resources/icons/browserconfig.xml" />
+		<meta name="theme-color" content="#ffffff" />
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -21,19 +30,28 @@
 		<link rel="stylesheet" type="text/css" href="static/vendors/css/animate.css" />
 		<link rel="stylesheet" href="static/resources/css/style.css" />
 		<link rel="stylesheet" href="static/resources/css/queries.css" />
-		<title>AJH Accounting</title>
+		<title>AJ Howard & Associates</title>
+		<title>AJ Howard & Associates</title>
+		<meta
+			name="description"
+			content="AJ Howard & Associates offers a range of bookkeeping, accounting and tax expertise to individuals and businesses."
+		/>
+
+		<!-- Google / Search Engine Tags -->
+		<meta itemprop="name" content="AJ Howard & Associates" />
+		<meta
+			itemprop="description"
+			content="AJ Howard & Associates offers a range of bookkeeping, accounting and tax expertise to individuals and businesses."
+		/>
+		<meta itemprop="image" content="static/resources/css/img/logo_circle_maroon.png" />
 	</head>
 	<body>
 		<header id="head">
 			<div class="row">
 				<div class="main-logo">
 					<a href="#head">
-						<!-- <svg class="svg-logo">
-						<use href="#svg-logo"></use>
-						</svg> -->
-						<!--<img src="static/resources/css/img/logo_circle_white.png" alt="" />-->
 						<svg
-							id="svg-logo"
+							id="svg-logo-main"
 							class="svg-logo"
 							svg-logo
 							version="1.0"
@@ -41,7 +59,7 @@
 							viewBox="0 0 544.000000 545.000000"
 							preserveAspectRatio="xMidYMid meet"
 						>
-							<g transform="translate(0.000000,545.000000) scale(0.100000,-0.100000)" >
+							<g transform="translate(0.000000,545.000000) scale(0.100000,-0.100000)">
 								<path
 									class="outer-circle"
 									d="M2375 5108 c-105 -12 -298 -51 -409 -83 -400 -116 -765 -333 -1066
@@ -107,23 +125,26 @@
 					<a class="btn btn-maroon" href="#contact">Free Assessment and Quote</a>
 				</div>
 			</div>
+			<div class="indicator js--wp-2">
+				<a href="#services"><i class="fas fa-chevron-down"></i></a>
+			</div>
 		</header>
 		<section class="section-nav">
-			<nav class="navbar navbar-expand-md px-5">
+			<nav class="navbar navbar-expand-md px-md-5 px-2">
 				<a href="#">
 					<svg
-							id="svg-logo"
-							class="svg-logo-small nav-icon"
-							svg-logo
-							version="1.0"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 544.000000 545.000000"
-							preserveAspectRatio="xMidYMid meet"
-						>
-							<g transform="translate(0.000000,545.000000) scale(0.100000,-0.100000)" >
-								<path
-									class="outer-circle"
-									d="M2375 5108 c-105 -12 -298 -51 -409 -83 -400 -116 -765 -333 -1066
+						id="svg-logo-nav"
+						class="svg-logo-small nav-icon"
+						svg-logo
+						version="1.0"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 544.000000 545.000000"
+						preserveAspectRatio="xMidYMid meet"
+					>
+						<g transform="translate(0.000000,545.000000) scale(0.100000,-0.100000)">
+							<path
+								class="outer-circle"
+								d="M2375 5108 c-105 -12 -298 -51 -409 -83 -400 -116 -765 -333 -1066
 					   -635 -407 -406 -658 -928 -719 -1492 -14 -125 -14 -431 0 -556 61 -564 312
 					   -1086 719 -1492 406 -407 928 -658 1492 -719 125 -14 431 -14 556 0 564 61
 					   1086 312 1492 719 407 406 658 928 719 1492 16 142 13 444 -4 588 -69 561
@@ -135,36 +156,36 @@
 					   267 -646 461 -187 187 -326 380 -450 624 -118 235 -193 468 -236 737 -25 159
 					   -25 537 0 696 43 269 118 502 236 737 125 246 266 441 452 625 203 200 393
 					   336 644 460 281 139 505 202 865 244 79 9 460 -4 555 -19z"
-								/>
-								<path
-									class="the-a"
-									d="M1229 3799 c-23 -8 -53 -83 -314 -777 -158 -422 -311 -816 -338 -877
+							/>
+							<path
+								class="the-a"
+								d="M1229 3799 c-23 -8 -53 -83 -314 -777 -158 -422 -311 -816 -338 -877
 					   -37 -80 -52 -126 -55 -167 l-4 -58 201 0 201 0 0 49 0 48 -49 6 c-65 8 -109
 					   31 -122 64 -11 29 16 133 94 368 l44 130 284 3 284 2 77 -227 c43 -126 80
 					   -246 82 -268 2 -22 9 -52 15 -65 6 -14 15 -44 21 -67 l11 -43 199 0 200 0 0
 					   49 0 48 -46 13 c-95 27 -131 83 -221 340 -62 175 -493 1432 -493 1437 0 6 -46
 					   1 -71 -8z m178 -1075 c-2 -3 -110 -3 -239 -2 l-234 3 116 330 c63 182 119 339
 					   124 350 6 15 36 -65 123 -329 63 -191 112 -350 110 -352z"
-								/>
-								<path
-									class="the-j"
-									d="M2131 3731 l2 -48 53 -12 c62 -14 99 -50 111 -109 4 -20 8 -352 7
+							/>
+							<path
+								class="the-j"
+								d="M2131 3731 l2 -48 53 -12 c62 -14 99 -50 111 -109 4 -20 8 -352 7
 					   -737 -1 -749 -8 -865 -54 -1000 -36 -103 -111 -199 -198 -250 -36 -22 -39 -36
 					   -14 -82 l17 -33 60 29 c159 75 307 233 365 389 52 139 52 137 60 947 5 418 11
 					   804 16 858 l7 97 -216 0 -217 0 1 -49z"
-								/>
-								<path
-									class="the-h"
-									d="M2872 3728 c3 -52 3 -52 43 -60 21 -5 49 -18 62 -30 48 -45 48 -40
+							/>
+							<path
+								class="the-h"
+								d="M2872 3728 c3 -52 3 -52 43 -60 21 -5 49 -18 62 -30 48 -45 48 -40
 					   48 -905 l-1 -813 208 0 208 0 0 48 0 49 -54 12 c-57 13 -87 37 -107 86 -8 20
 					   -13 142 -17 378 l-5 347 463 0 463 0 -7 -460 -7 -460 222 0 c198 0 220 2 215
 					   16 -3 9 -6 30 -6 48 0 31 -2 32 -59 44 -74 15 -107 46 -118 110 -4 26 -8 355
 					   -8 732 l0 685 23 46 c16 33 22 63 22 112 l0 67 -249 0 -250 0 1 -48 0 -48 69
 					   -11 c135 -21 140 -35 147 -415 l5 -298 -463 0 -463 0 6 298 c4 212 10 316 20
 					   362 9 36 17 85 19 110 l3 45 -218 3 -218 2 3 -52z"
-								/>
-							</g>
-						</svg>
+							/>
+						</g>
+					</svg>
 				</a>
 				<button
 					class="navbar-toggler navbar-dark"
@@ -209,7 +230,7 @@
 											Annual Financial Statements
 										</li>
 										<li>
-											Pastel Sage One Accounting:
+											Sage Accounting:
 										</li>
 										<ul>
 											<li>
@@ -218,13 +239,11 @@
 											</li>
 										</ul>
 										<li>
-											Pastel Desktop setup and
-											support
+											Xpress & Partner Accounting setup and support
 										</li>
 										<li>Bookkeeping Services</li>
 										<li>
-											Management accounts (Monthly /
-											Quarterly)
+											Management accounts (Monthly / Quarterly)
 										</li>
 										<li>
 											Outsourced accounting services
@@ -243,8 +262,7 @@
 										<li>Monthly Payroll</li>
 										<li>Monthly EMP201 Returns</li>
 										<li>
-											EMP501 Submissions (including
-											IRP5 and IT3a certificates)
+											EMP501 Submissions (including IRP5 and IT3a certificates)
 										</li>
 									</ul>
 								</div>
@@ -261,8 +279,7 @@
 										<li>Provisional Tax</li>
 										<li>SARS Dispute Resolutions</li>
 										<li>
-											Registrations for Tax, VAT,
-											PAYE, UIF, SDL
+											Registrations for Tax, VAT, PAYE, UIF, SDL
 										</li>
 									</ul>
 								</div>
@@ -275,8 +292,7 @@
 									<ul>
 										<li>CIPC Annual Returns</li>
 										<li>
-											Company Registrations and
-											Amendments
+											Company Registrations and Amendments
 										</li>
 										<li>
 											Level 4 B-BBEE Verification
@@ -303,7 +319,7 @@
 					<div class="col-12 order-1 col-md-6 order-md-2 p-0">
 						<a href="#">
 							<figure class="fig-image m-0">
-								<img src="static/resources/img/sage one.jpg" class="image" alt="Sage One Accounting" />
+								<img src="static/resources/img/sage_one.jpg" class="image" alt="Sage One Accounting" />
 							</figure>
 						</a>
 					</div>
@@ -471,22 +487,22 @@
 			</div>
 		</section>
 		<footer>
-			<div class="row w-100">
-				
-			<div class="col-12  text-center"><a href="#">
-				<svg
-						id="svg-logo"
-						class="svg-logo-small"
-						svg-logo
-						version="1.0"
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 544.000000 545.000000"
-						preserveAspectRatio="xMidYMid meet"
-					>
-						<g transform="translate(0.000000,545.000000) scale(0.100000,-0.100000)" >
-							<path
-								class="outer-circle"
-								d="M2375 5108 c-105 -12 -298 -51 -409 -83 -400 -116 -765 -333 -1066
+			<div class="row w-100 m-0">
+				<div class="col-12  text-center">
+					<a href="#">
+						<svg
+							id="svg-logo-footer"
+							class="svg-logo-small"
+							svg-logo
+							version="1.0"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 544.000000 545.000000"
+							preserveAspectRatio="xMidYMid meet"
+						>
+							<g transform="translate(0.000000,545.000000) scale(0.100000,-0.100000)">
+								<path
+									class="outer-circle"
+									d="M2375 5108 c-105 -12 -298 -51 -409 -83 -400 -116 -765 -333 -1066
 				   -635 -407 -406 -658 -928 -719 -1492 -14 -125 -14 -431 0 -556 61 -564 312
 				   -1086 719 -1492 406 -407 928 -658 1492 -719 125 -14 431 -14 556 0 564 61
 				   1086 312 1492 719 407 406 658 928 719 1492 16 142 13 444 -4 588 -69 561
@@ -498,42 +514,46 @@
 				   267 -646 461 -187 187 -326 380 -450 624 -118 235 -193 468 -236 737 -25 159
 				   -25 537 0 696 43 269 118 502 236 737 125 246 266 441 452 625 203 200 393
 				   336 644 460 281 139 505 202 865 244 79 9 460 -4 555 -19z"
-							/>
-							<path
-								class="the-a"
-								d="M1229 3799 c-23 -8 -53 -83 -314 -777 -158 -422 -311 -816 -338 -877
+								/>
+								<path
+									class="the-a"
+									d="M1229 3799 c-23 -8 -53 -83 -314 -777 -158 -422 -311 -816 -338 -877
 				   -37 -80 -52 -126 -55 -167 l-4 -58 201 0 201 0 0 49 0 48 -49 6 c-65 8 -109
 				   31 -122 64 -11 29 16 133 94 368 l44 130 284 3 284 2 77 -227 c43 -126 80
 				   -246 82 -268 2 -22 9 -52 15 -65 6 -14 15 -44 21 -67 l11 -43 199 0 200 0 0
 				   49 0 48 -46 13 c-95 27 -131 83 -221 340 -62 175 -493 1432 -493 1437 0 6 -46
 				   1 -71 -8z m178 -1075 c-2 -3 -110 -3 -239 -2 l-234 3 116 330 c63 182 119 339
 				   124 350 6 15 36 -65 123 -329 63 -191 112 -350 110 -352z"
-							/>
-							<path
-								class="the-j"
-								d="M2131 3731 l2 -48 53 -12 c62 -14 99 -50 111 -109 4 -20 8 -352 7
+								/>
+								<path
+									class="the-j"
+									d="M2131 3731 l2 -48 53 -12 c62 -14 99 -50 111 -109 4 -20 8 -352 7
 				   -737 -1 -749 -8 -865 -54 -1000 -36 -103 -111 -199 -198 -250 -36 -22 -39 -36
 				   -14 -82 l17 -33 60 29 c159 75 307 233 365 389 52 139 52 137 60 947 5 418 11
 				   804 16 858 l7 97 -216 0 -217 0 1 -49z"
-							/>
-							<path
-								class="the-h"
-								d="M2872 3728 c3 -52 3 -52 43 -60 21 -5 49 -18 62 -30 48 -45 48 -40
+								/>
+								<path
+									class="the-h"
+									d="M2872 3728 c3 -52 3 -52 43 -60 21 -5 49 -18 62 -30 48 -45 48 -40
 				   48 -905 l-1 -813 208 0 208 0 0 48 0 49 -54 12 c-57 13 -87 37 -107 86 -8 20
 				   -13 142 -17 378 l-5 347 463 0 463 0 -7 -460 -7 -460 222 0 c198 0 220 2 215
 				   16 -3 9 -6 30 -6 48 0 31 -2 32 -59 44 -74 15 -107 46 -118 110 -4 26 -8 355
 				   -8 732 l0 685 23 46 c16 33 22 63 22 112 l0 67 -249 0 -250 0 1 -48 0 -48 69
 				   -11 c135 -21 140 -35 147 -415 l5 -298 -463 0 -463 0 6 298 c4 212 10 316 20
 				   362 9 36 17 85 19 110 l3 45 -218 3 -218 2 3 -52z"
-							/>
-						</g>
-					</svg>
-			</a></div>
-			<div class="col-12 text-center px-5">
-				<p>
-					Copyright © 2019 AJH Accounting. All Rights Reserved. <a target="_blank" title="Web Design by Web Partner" href="http://www.webpartner.co.za/">Web Partner</a>
-				</p>
-			</div>
+								/>
+							</g>
+						</svg>
+					</a>
+				</div>
+				<div class="col-12 text-center">
+					<p>
+						Copyright © 2019 AJH Accounting. All Rights Reserved.
+						<a target="_blank" title="Web Design by Web Partner" href="http://www.webpartner.co.za/"
+							>Web Partner</a
+						>
+					</p>
+				</div>
 			</div>
 		</footer>
 		<script
@@ -555,7 +575,5 @@
 		<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 		<script src="static/vendors/js/jquery.waypoints.min.js"></script>
 		<script src="static/resources/js/script.js"></script>
-
-
 	</body>
 </html>
