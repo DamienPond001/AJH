@@ -153,6 +153,31 @@ $(document).ready(function() {
 		}
 	);
 
+	//Contact Map fade in
+	$(".js--wp-3").waypoint(
+		function(direction) {
+			if (direction == "down") {
+				$(".map-cols.col-left").addClass("active");
+				$(".map-content.col-right").addClass("active");
+			}
+		},
+		{
+			offset: "60%;"
+		}
+	);
+
+	$(".js--wp-3").waypoint(
+		function(direction) {
+			if (direction == "down") {
+				$(".map-cols.col-right").addClass("active");
+				$(".map-content.col-left").addClass("active");
+			}
+		},
+		{
+			offset: "30%;"
+		}
+	);
+
 	    /* Navigation scroll */
 		$(function() {
 			$('a[href*=#]:not([href=#])').click(function() {

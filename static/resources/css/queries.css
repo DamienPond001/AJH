@@ -64,6 +64,22 @@
         column-count: 1;
     }
 
+    .card-img-accounting {
+        background-size: unset;
+    }
+    
+    .card-img-payroll {
+        background-size: unset;
+    }
+    .card-img-statutory {
+        background-size: unset;
+    }
+    .card-img-taxation {
+
+        background-size: unset;
+
+    }
+
 
   }
 
