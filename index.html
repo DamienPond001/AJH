@@ -401,7 +401,7 @@
 							</div>
 							<div class="row">
 								<div class="col-4">Address</div>
-								<div class="col-8">1st Floor Bayview House 132 St Georges Street Simons Town 7975</div>
+								<div class="col-8">1st Floor, 132 St Georges Street, Simons Town, 7975</div>
 							</div>
 						</div>
 					</div>
@@ -455,7 +455,7 @@
 
 				<div class="row">
 					<div class="col col-md-8 offset-md-2">
-						<form action="">
+						<form  method="post" id="reused_form">
 							<div class="form-entry">
 								<input type="text" name="name" id="name" autocomplete="off" required />
 								<label for="name" class="form-label">
@@ -475,13 +475,26 @@
 								</label>
 							</div>
 							<div class="form-entry text-area-entry">
-								<label for="enquiry" class="text-area-label">
+								<label for="message" class="text-area-label">
 									<span class="label-content">Enquiry</span>
 								</label>
-								<textarea class="text-area" id="enquiry" rows="3"></textarea>
+								<textarea class="text-area" name="message" id="message" rows="3"></textarea>
+							</div>
+							<div class="row" style="margin-bottom:30px;">
+								<div class="col-sm-5">
+									<img src="captcha.php" id="captcha_image"/>
+									<br/>
+									<a id="captcha_reload" href="#">reload</a> 
+								</div>
+								<div class="col-sm-6">
+									<label for="email">Enter the code from the image here:</label>
+									<input type="text" class="form-control" required id="captcha" name="captcha" >
+								</div>
 							</div>
 							<button type="submit" class="btn btn-block btn-maroon">Submit</button>
 						</form>
+						<div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Posted your message successfully!</h3> </div>
+                    <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
 					</div>
 				</div>
 			</div>
@@ -575,5 +588,6 @@
 		<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 		<script src="static/vendors/js/jquery.waypoints.min.js"></script>
 		<script src="static/resources/js/script.js"></script>
+		<script src="form.js"></script>
 	</body>
 </html>

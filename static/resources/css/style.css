@@ -3,6 +3,7 @@
 	padding: 0;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+
 }
 
 body,
@@ -12,6 +13,12 @@ html {
 	font-size: 20px;
 	font-weight: 300;
 	text-rendering: optimizeLegibility;
+	/*overflow-x: hidden;*/
+	
+}
+
+section {
+	overflow-x: hidden;
 }
 
 /*-------------------*/
@@ -646,6 +653,10 @@ ul ul {
 /*-------------------*/
 /*------ABOUT------*/
 /*-------------------*/
+
+#about {
+	overflow-x: hidden;
+}
 
 #about .about-text {
 	text-align: center;

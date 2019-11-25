@@ -201,7 +201,7 @@ $(document).ready(function() {
 		//Animate indicator
 		(function myLoop (i) {          
 			setTimeout(function () {  
-				console.log(i)
+				
 				if(i%5==0){
 					$(".indicator i").toggleClass('animated bounce');  
 				}           
