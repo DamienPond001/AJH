@@ -18,7 +18,7 @@ try {
     $mail->Host       = 'smtp.office365.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'pond@live.co.za';                     // SMTP username
-    $mail->Password   = '623541dp001';                               // SMTP password
+    $mail->Password   = '';                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
