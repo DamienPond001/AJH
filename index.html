@@ -30,8 +30,10 @@
 		<link rel="stylesheet" type="text/css" href="static/vendors/css/animate.css" />
 		<link rel="stylesheet" href="static/resources/css/style.css" />
 		<link rel="stylesheet" href="static/resources/css/queries.css" />
+
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<title>AJ Howard & Associates</title>
-		<title>AJ Howard & Associates</title>
+
 		<meta
 			name="description"
 			content="AJ Howard & Associates offers a range of bookkeeping, accounting and tax expertise to individuals and businesses."
@@ -46,6 +48,7 @@
 		<meta itemprop="image" content="static/resources/css/img/logo_circle_maroon.png" />
 	</head>
 	<body>
+		<div class="messages"></div>
 		<header id="head">
 			<div class="row">
 				<div class="main-logo">
@@ -219,8 +222,8 @@
 			<h2>Services</h2>
 			<div class="container mb-4">
 				<div class="row service-row">
-					<div class="card-columns">
-						<div class="card first-fade">
+					<div class="card-columns first-fade">
+						<div class="card">
 							<div class="card-body card-img-accounting">
 								<h4 class="card-title">Accounting</h4>
 								<div class="list">
@@ -254,7 +257,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card fourth-fade">
+						<div class="card">
 							<div class="card-body card-img-payroll">
 								<h4 class="card-title">Payroll</h4>
 								<div class="list">
@@ -268,7 +271,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card second-fade">
+						<div class="card">
 							<div class="card-body card-img-taxation">
 								<h4 class="card-title">Taxation</h4>
 								<div class="list">
@@ -285,7 +288,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card third-fade">
+						<div class="card">
 							<div class="card-body card-img-statutory">
 								<h4 class="card-title">Statutory</h4>
 								<div class="list">
@@ -435,8 +438,8 @@
 						<div class="mapouter">
 							<div class="gmap_canvas">
 								<iframe
-								class="map"
-								id="gmap_canvas"
+									class="map"
+									id="gmap_canvas"
 									src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14335.146733946753!2d27.939511!3d-26.073227!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x517c1faf5034fca4!2sChiropractor+-+Dr+Monica+Fiandeiro!5e0!3m2!1sen!2sza!4v1562855222804!5m2!1sen!2sza"
 									frameborder="0"
 									scrolling="no"
@@ -455,7 +458,7 @@
 
 				<div class="row">
 					<div class="col col-md-8 offset-md-2">
-						<form  method="post" id="reused_form" action="mailer.php">
+						<form method="post" id="reused_form" action="mailer.php">
 							<div class="form-entry">
 								<input type="text" name="name" id="name" autocomplete="off" required />
 								<label for="name" class="form-label">
@@ -481,20 +484,10 @@
 								<textarea class="text-area" name="message" id="message" rows="3"></textarea>
 							</div>
 							<div class="row" style="margin-bottom:30px;">
-								<div class="col-sm-5">
-									<img src="captcha.php" id="captcha_image"/>
-									<br/>
-									<a id="captcha_reload" href="#">reload</a> 
-								</div>
-								<div class="col-sm-6">
-									<label for="email">Enter the code from the image here:</label>
-									<input type="text" class="form-control" required id="captcha" name="captcha" >
-								</div>
+								<div class="g-recaptcha" data-sitekey="add_sitekey"></div>
 							</div>
 							<button type="submit" class="btn btn-block btn-maroon">Submit</button>
 						</form>
-						<div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Posted your message successfully!</h3> </div>
-                    <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
 					</div>
 				</div>
 			</div>
@@ -588,6 +581,16 @@
 		<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 		<script src="static/vendors/js/jquery.waypoints.min.js"></script>
 		<script src="static/resources/js/script.js"></script>
-		<!--<script src="form.js"></script>-->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153650627-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "UA-153650627-1");
+		</script>
 	</body>
 </html>

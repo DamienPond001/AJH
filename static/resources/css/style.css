@@ -491,6 +491,7 @@ H - 11261.841796875*/
 	);
 	background-image: linear-gradient(rgba(12, 12, 12, 0.8), rgba(12, 12, 12, 0.8));
 	position: relative;
+	overflow: hidden;
 }
 .service-box {
 	-webkit-box-shadow: 0 2px 2px #555;
@@ -503,7 +504,7 @@ H - 11261.841796875*/
 }
 
 .card {
-	opacity: 0;
+	opacity: 1;
 	transition: opacity 0.2s;
 	-webkit-transition: opacity 0.2s;
 	-moz-transition: opacity 0.2s;
@@ -578,6 +579,8 @@ ul ul {
 
 /*make responsive*/
 .card-columns {
+	overflow: hidden;
+	opacity: 0;
 	-webkit-column-count: 2;
 	column-count: 2;
 }
@@ -886,4 +889,50 @@ footer a {
 footer a:hover {
 	color: #c06993;
 	border-bottom: 1px solid #c06993;
+}
+
+/*-------------------*/
+/*------EMAIL MESSAGES------*/
+/*-------------------*/
+
+.messages {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 999;
+}
+
+.messages__message {
+	position: relative;
+
+	border-radius: 5px;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	font-size: 0.9rem;
+	font-weight: 200;
+	margin: 0.2rem;
+	opacity: 1;
+	transition: opacity 0.2s ease-out;
+}
+
+.messages__message:hover {
+	cursor: pointer;
+}
+
+.messages__message.hidden {
+	cursor: default;
+	opacity: 0;
+}
+
+.messages__message.success {
+	background-color: #72b472;
+}
+
+.messages__message.failure {
+	background-color: #c85c57;
+}
+
+.box-shadow {
+	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }

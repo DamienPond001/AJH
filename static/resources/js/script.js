@@ -109,17 +109,17 @@ $(document).ready(function() {
 	);
 
 	//Cards fade in
-	$(".js--wp-1").waypoint(
+	 $(".js--wp-1").waypoint(
 		function(direction) {
 			if (direction == "down") {
 				$(".first-fade").addClass("animated fadeInUp");
 			}
 		},
 		{
-			offset: "55%;"
+			offset: "75%;"
 		}
 	);
-
+/*
 	$(".js--wp-1").waypoint(
 		function(direction) {
 			if (direction == "down") {
@@ -151,7 +151,7 @@ $(document).ready(function() {
 		{
 			offset: "30%;"
 		}
-	);
+	);*/
 
 	//Contact Map fade in
 	$(".js--wp-3").waypoint(
@@ -176,7 +176,7 @@ $(document).ready(function() {
 		{
 			offset: "30%;"
 		}
-	);
+	); 
 
 	    /* Navigation scroll */
 		$(function() {
@@ -207,5 +207,28 @@ $(document).ready(function() {
 				}           
 			   if (--i) myLoop(i);     
 			}, 3000)
-		 })(107);                        
+		 })(107);    
+		 
+		 
+		 (function emailMessage() {
+			let messageHtml;
+			let type = window.location.hash.substr(1);
+			const messageBlock = document.querySelector('.messages');
+			
+			if (type.includes('error')) {
+				messageHtml = `<div class="messages__message failure box-shadow">
+					<span class="messages__message--text">Something went wrong! Please email us your enquiry directly.</span> <i class="fas fa-times px-1"></i>
+					</div>`;
+			} else if (type.includes('success')) {
+				messageHtml = `<div class="messages__message success box-shadow">
+					<span class="messages__message--text">Your message has been sent.</span> <i class="fas fa-times px-1"></i>
+					</div>`;
+			}
+			messageBlock.insertAdjacentHTML('afterbegin', messageHtml);
+		
+			messageBlock.addEventListener('click', e => {
+				let clickedMessage = e.target.closest('.messages__message');
+				clickedMessage.classList.add('hidden');
+			});
+		})();
 });
