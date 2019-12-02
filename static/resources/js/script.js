@@ -224,11 +224,16 @@ $(document).ready(function() {
 					<span class="messages__message--text">Your message has been sent.</span> <i class="fas fa-times px-1"></i>
 					</div>`;
 			}
+			 else {
+				messageHtml = ``;
+			 }
 			messageBlock.insertAdjacentHTML('afterbegin', messageHtml);
 		
 			messageBlock.addEventListener('click', e => {
 				let clickedMessage = e.target.closest('.messages__message');
-				clickedMessage.classList.add('hidden');
+				if(clickedMessage){
+					clickedMessage.classList.add('hidden');
+				}
 			});
 		})();
 });
